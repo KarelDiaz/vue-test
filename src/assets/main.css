@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'SFPro';
+    src: URL('/font/SF-Pro.ttf') format('truetype');
+  }
+
+  * {
+    font-family: SFPro !important;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :root {
+    --color-white: #ffffff;
+    --color-light: #f4f4f4;
+    --color-gray: #8f8f8f;
+    --color-primary: #009de0;
+    --color-secondary: #003174;
+    --color-success: #87a813;
+    --color-success-light: #c7dec3;
+  }
+
+  html,
+  body {
+    scroll-padding-top: 200px;
+  }
+}

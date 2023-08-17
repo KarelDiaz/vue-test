@@ -1,0 +1,37 @@
+// -------------------------------------------------- //
+// responsive
+// -------------------------------------------------- //
+// sm	640px	@media (min-width: 640px) { ... }
+// md	768px	@media (min-width: 768px) { ... }
+// lg	1024px @media (min-width: 1024px) { ... }
+// xl	1280px @media (min-width: 1280px) { ... }
+@mixin responsive ($breakpoint) {
+
+  // sm
+  @if $breakpoint==sm {
+    @media only screen and (min-width: 640px) {
+      @content;
+    }
+  }
+
+  // md
+  @if $breakpoint==md {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+
+  // lg
+  @if $breakpoint==lg {
+    @media only screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+
+  // xl
+  @if $breakpoint==xl {
+    @media only screen and (min-width: 1280px) {
+      @content;
+    }
+  }
+}
